@@ -460,7 +460,7 @@ winMessage: 'Congratulations, {winners}! You won **{this.prize.toUpperCase()}**!
 
 If you want to fill in strings that are not messages of a giveaway, or just custom embeds, then you can use `giveaway.fillInString(string)` for strings, `giveaway.fillInEmbed(embed)` for embeds
 
-## 🇫🇷 Translation
+## 🌐 Translation
 
 You can also pass a `messages` parameter for the `start()` function, if you want to translate the giveaway texts:
 
