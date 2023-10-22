@@ -513,7 +513,6 @@ class GiveawaysManager extends EventEmitter {
     _checkGiveaway() {
         if (this.giveaways.length <= 0) return;
         this.giveaways.forEach(async (giveaway) => {
-            // First case: giveaway is ended and we need to check if it should be deleted
             if (giveaway.ended) {
                 if (
                     Number.isFinite(this.options.endedGiveawaysLifetime) &&
@@ -523,14 +522,6 @@ class GiveawaysManager extends EventEmitter {
                     await this.deleteGiveaway(giveaway.messageId);
                 }
                 return;
-            }
-
-            // Second case: the giveaway is a drop
-            if (giveaway.isDrop) {
-                if (giveaway.startAt + DELETE_DROP_DATA_AFTER <= Date.now()) {
-                    this.giveaways = this.giveaways.filter((g) => g.messageId !== giveaway.messageId);
-                    return await this.deleteGiveaway(giveaway.messageId);
-                }
             }
 
             // Third case: the giveaway is paused and we should check whether it should be unpaused
@@ -587,9 +578,7 @@ class GiveawaysManager extends EventEmitter {
             // Regular case: the giveaway is not ended and we need to update it
             const lastChanceEnabled =
                 giveaway.lastChance.enabled && giveaway.remainingTime < giveaway.lastChance.threshold;
-            const buttonClickedEnabled = giveaway.participants.length > 0
-
-            const updatedEmbed = this.generateMainEmbed(giveaway, lastChanceEnabled, buttonClickedEnabled);
+            const updatedEmbed = this.generateMainEmbed(giveaway, lastChanceEnabled, giveaway.participants.length > 0);
             const needUpdate =
                 !embedEqual(giveaway.message.embeds[0].data, updatedEmbed.data) ||
                 giveaway.message.content !== giveaway.fillInString(giveaway.messages.giveaway);
@@ -605,6 +594,7 @@ class GiveawaysManager extends EventEmitter {
             }
         });
     }
+
 
     /**
      * @ignore
@@ -661,7 +651,7 @@ class GiveawaysManager extends EventEmitter {
             const row = new Discord.ActionRowBuilder()
             .addComponents(new Discord.ButtonBuilder()
                 .setEmoji(`${this.options.default.buttonEmoji}`)
-                .setLabel(`${giveaway.participants.length == 0 ? '' : '' + giveaway.participants.length}`)
+                .setLabel(`${giveaway.participants.length == 0 ? ' ' : giveaway.participants.length}`)
                 .setStyle(typeof this.options.default.buttonStyle === 'number' ? this.options.default.buttonStyle : Discord.ButtonStyle.Secondary)
                 .setCustomId('vante-enter')
             )

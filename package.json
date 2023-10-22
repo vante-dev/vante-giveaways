@@ -2,7 +2,7 @@
   "name": "vante-giveaways",
   "description": "A complete framework to facilitate the creation of giveaways using discord.js",
   "homepage": "https://giveaways.vante.dev/",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "author": "Kaan 'Vante' Karahanlı",
   "main": "./index.js",
   "license": "GPL-3.0",

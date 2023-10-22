@@ -636,7 +636,8 @@ class Giveaway extends EventEmitter {
 
                 const rows = new Discord.ActionRowBuilder()
                 .addComponents(new Discord.ButtonBuilder()
-                .setLabel(`${this.manager.options.default.buttonEmoji}${this.participants.length == 0 ? '' : ' ' + this.participants.length}`)
+                .setEmoji(`${this.manager.options.default.buttonEmoji}`)
+                .setLabel(`${this.participants.length == 0 ? ' ' : this.participants.length}`)
                 .setStyle(typeof this.manager.options.default.buttonStyle === 'number' ? this.manager.options.default.buttonStyle : Discord.ButtonStyle.Secondary)
                 .setCustomId('vante-enter')
                 .setDisabled(true)
@@ -809,7 +810,8 @@ class Giveaway extends EventEmitter {
                 
                 const rows = new Discord.ActionRowBuilder()
                 .addComponents(new Discord.ButtonBuilder()
-                .setLabel(`${this.manager.options.default.buttonEmoji}${this.participants.length == 0 ? '' : ' ' + this.participants.length}`)
+                .setEmoji(`${this.manager.options.default.buttonEmoji}`)
+                .setLabel(`${this.participants.length == 0 ? ' ' : this.participants.length}`)
                 .setStyle(typeof this.manager.options.default.buttonStyle === 'number' ? this.manager.options.default.buttonStyle : Discord.ButtonStyle.Secondary)
                 .setCustomId('vante-enter')
                 .setDisabled(true)
@@ -1165,7 +1167,8 @@ class Giveaway extends EventEmitter {
             const embed = this.manager.generateMainEmbed(this, lastChanceEnabled, buttonClickedEnabled);
             const row = new Discord.ActionRowBuilder()
             .addComponents(new Discord.ButtonBuilder()
-                .setLabel(`${this.manager.options.default.buttonEmoji}${this.participants.length == 0 ? '' : ' ' + this.participants.length}`)
+                .setEmoji(`${this.manager.options.default.buttonEmoji}`)
+                .setLabel(`${this.participants.length == 0 ? ' ' : this.participants.length}`)
                 .setStyle(typeof this.manager.options.default.buttonStyle === 'number' ? this.manager.options.default.buttonStyle : Discord.ButtonStyle.Secondary)
                 .setCustomId('vante-enter')
             )
