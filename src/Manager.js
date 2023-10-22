@@ -258,7 +258,7 @@ class GiveawaysManager extends EventEmitter {
 
             const row = new Discord.ActionRowBuilder()
             .addComponents(new Discord.ButtonBuilder()
-                .setLabel(`${this.options.default.buttonEmoji}`)
+                .setEmoji(`${this.options.default.buttonEmoji}`)
                 .setStyle(typeof this.options.default.buttonStyle === 'number' ? this.options.default.buttonStyle : Discord.ButtonStyle.Secondary)
                 .setCustomId(`${giveaway.isDrop ? 'vante-drop' : 'vante-enter'}`)
             )
@@ -290,7 +290,8 @@ class GiveawaysManager extends EventEmitter {
 
                         const row = new Discord.ActionRowBuilder()
                             .addComponents(new Discord.ButtonBuilder()
-                                .setLabel(`${this.options.default.buttonEmoji} ${giveaway.participants.length}`)
+                                .setEmoji(`${this.options.default.buttonEmoji}`)
+                                .setLabel(`${giveaway.participants.length}`)
                                 .setStyle(typeof this.options.default.buttonStyle === 'number' ? this.options.default.buttonStyle : Discord.ButtonStyle.Secondary)
                                 .setCustomId('vante-drop')
                             )
@@ -567,7 +568,7 @@ class GiveawaysManager extends EventEmitter {
             ) {
                 setTimeout(async () => {
                     giveaway.message ??= await giveaway.fetchMessage().catch(() => {});
-                    const embed = this.generateMainEmbed(giveaway, true, true);
+                    const embed = this.generateMainEmbed(giveaway, true, giveaway.participants.length > 0);
                     await giveaway.message
                         ?.edit({
                             content: giveaway.fillInString(giveaway.messages.giveaway),
@@ -586,8 +587,7 @@ class GiveawaysManager extends EventEmitter {
             // Regular case: the giveaway is not ended and we need to update it
             const lastChanceEnabled =
                 giveaway.lastChance.enabled && giveaway.remainingTime < giveaway.lastChance.threshold;
-            const buttonClickedEnabled = 
-                giveaway.lastChance.enabled && giveaway.participants.length > 0
+            const buttonClickedEnabled = giveaway.participants.length > 0
 
             const updatedEmbed = this.generateMainEmbed(giveaway, lastChanceEnabled, buttonClickedEnabled);
             const needUpdate =
@@ -636,15 +636,15 @@ class GiveawaysManager extends EventEmitter {
 
             const row = new Discord.ActionRowBuilder()
             .addComponents(new Discord.ButtonBuilder()
-                .setLabel(`${this.options.default.buttonEmoji} ${giveaway.participants.length}`)
+                .setEmoji(`${this.options.default.buttonEmoji}`)
+                .setLabel(`${giveaway.participants.length}`)
                 .setStyle(typeof this.options.default.buttonStyle === 'number' ? this.options.default.buttonStyle : Discord.ButtonStyle.Secondary)
                 .setCustomId('vante-enter')
             )
 
             const lastChanceEnabled =
                 giveaway.lastChance.enabled && giveaway.remainingTime < giveaway.lastChance.threshold;
-            const buttonClickedEnabled = 
-                giveaway.lastChance.enabled && giveaway.participants.length > 0
+            const buttonClickedEnabled = giveaway.participants.length > 0
 
             const embed = this.generateMainEmbed(giveaway, lastChanceEnabled, buttonClickedEnabled);
 
@@ -660,17 +660,17 @@ class GiveawaysManager extends EventEmitter {
 
             const row = new Discord.ActionRowBuilder()
             .addComponents(new Discord.ButtonBuilder()
-                .setLabel(`${this.options.default.buttonEmoji}${giveaway.participants.length == 0 ? '' : ' ' + giveaway.participants.length}`)
+                .setEmoji(`${this.options.default.buttonEmoji}`)
+                .setLabel(`${giveaway.participants.length == 0 ? '' : '' + giveaway.participants.length}`)
                 .setStyle(typeof this.options.default.buttonStyle === 'number' ? this.options.default.buttonStyle : Discord.ButtonStyle.Secondary)
                 .setCustomId('vante-enter')
             )
 
             const lastChanceEnabled =
                 giveaway.lastChance.enabled && giveaway.remainingTime < giveaway.lastChance.threshold;
-            const buttonClickedEnabled = 
-                giveaway.lastChance.enabled && giveaway.participants.length > 0
+            const buttonClickedEnabled = giveaway.participants.length > 0
 
-            const embed = this.generateMainEmbed(giveaway, lastChanceEnabled, buttonClickedEnabled);
+            const embed = this.generateMainEmbed(giveaway, lastChanceEnabled ?? false, buttonClickedEnabled);
 
             const vante = (await giveaway.fetchMessage().catch(() => {})) ?? giveaway.message;
             vante.edit({
