@@ -27,7 +27,7 @@ npm install --save vante-giveaways
 
 ## Examples
 
-You can read this example bot on GitHub: [discord-giveaways-bot](https://github.com/vante-dev/vante-giveaways/tree/giveaways-bot)
+You can read this example bot on GitHub: [discord-giveaways-bot](https://github.com/vante-dev/vante-giveaways-bot)
 
 ### Launch of the module
 
@@ -460,7 +460,7 @@ winMessage: 'Congratulations, {winners}! You won **{this.prize.toUpperCase()}**!
 
 If you want to fill in strings that are not messages of a giveaway, or just custom embeds, then you can use `giveaway.fillInString(string)` for strings, `giveaway.fillInEmbed(embed)` for embeds
 
-## 🇫🇷 Translation
+## 🌐 Translation
 
 You can also pass a `messages` parameter for the `start()` function, if you want to translate the giveaway texts:
 
@@ -545,20 +545,20 @@ There are 4 methods you will need to replace:
 
 <u>**SQL examples**</u>
 
--   [MySQL](https://github.com/vante-dev/vante-giveaways/examples/custom-databases/mysql.js)
+-   [MySQL](https://github.com/vante-dev/vante-giveaways/blob/main/examples/custom-databases/mysql.js)
 -   SQLite
-    -   [Quick.db](https://github.com/vante-dev/vante-giveaways/examples/custom-databases/quick.db.js)
-    -   [Enmap](https://github.com/vante-dev/vante-giveaways/examples/custom-databases/enmap.js)
+    -   [Quick.db](https://github.com/vante-dev/vante-giveaways/blob/main/examples/custom-databases//quick.db.js)
+    -   [Enmap](https://github.com/vante-dev/vante-giveaways/blob/main/examples/custom-databases/enmap.js)
 
 <u>**NoSQL examples**</u>
 
 -   MongoDB
-    -   [Mongoose](https://github.com/vante-dev/vante-giveaways/examples/custom-databases/mongoose.js)
-    -   [QuickMongo](https://github.com/vante-dev/vante-giveaways/examples/custom-databases/quickmongo.js) ⚠️ Not recommended for high giveaway usage, use the `mongoose` example instead
--   [Apache CouchDB - Nano](https://github.com/vante-dev/vante-giveaways/examples/custom-databases/nano.js)
+    -   [Mongoose](https://github.com/vante-dev/vante-giveaways/blob/main/examples/custom-databases/mongoose.js)
+    -   [QuickMongo](https://github.com/vante-dev/vante-giveaways/blob/main/examples/custom-databases/quickmongo.js) ⚠️ Not recommended for high giveaway usage, use the `mongoose` example instead
+-   [Apache CouchDB - Nano](https://github.com/vante-dev/vante-giveaways/blob/main/examples/custom-databases/nano.js)
 -   Replit Database ⚠️ Only usable if your bot is hosted on [Replit](https://replit.com/)
-    -   [@replit/database](https://github.com/vante-dev/vante-giveaways/examples/custom-databases/replit.js)
-    -   [Quick.Replit](https://github.com/vante-dev/vante-giveaways/examples/custom-databases/quick.replit.js)
+    -   [@replit/database](https://github.com/vante-dev/vante-giveaways/blob/main/examples/custom-databases/replit.js)
+    -   [Quick.Replit](https://github.com/vante-dev/vante-giveaways/blob/main/examples/custom-databases/quick.replit.js)
 
 
 ## 🤝 Contribution Acknowledgments 🤝
