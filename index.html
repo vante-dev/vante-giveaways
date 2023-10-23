@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <script src="scripts/nav.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.3/fuse.min.js"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link type="text/css" rel="stylesheet" href="styles/skyceil.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="utilities">
+        <div id="search">
+            <input type="text" id="search-box" placeholder="Search"><br>
+            <div id="search-results" style="display: none;"></div>
+        </div>
+        <button class="theme" data-theme="light"><i class="fas fa-moon"></i></button>
+    </div>
+    <hr>
+    <h4><a href="index.html">Home</a></h4><h5 class="no-bottom must-underline">Classes</h5><ul><li><span class="small-icon C">C</span><b><a href="Giveaway.html">Giveaway</a></b><ul class="has-class-methods"><li><span class="small-icon F">F</span><a href="Giveaway.html#checkBonusEntries">checkBonusEntries</a></li><li><span class="small-icon F">F</span><a href="Giveaway.html#checkWinnerEntry">checkWinnerEntry</a></li><li><span class="small-icon F">F</span><a href="Giveaway.html#edit">edit</a></li><li><span class="small-icon F">F</span><a href="Giveaway.html#end">end</a></li><li><span class="small-icon F">F</span><a href="Giveaway.html#ensureEndTimeout">ensureEndTimeout</a></li><li><span class="small-icon F">F</span><a href="Giveaway.html#exemptMembers">exemptMembers</a></li><li><span class="small-icon F">F</span><a href="Giveaway.html#fetchAllEntrants">fetchAllEntrants</a></li><li><span class="small-icon F">F</span><a href="Giveaway.html#fetchMessage">fetchMessage</a></li><li><span class="small-icon F">F</span><a href="Giveaway.html#fillInEmbed">fillInEmbed</a></li><li><span class="small-icon F">F</span><a href="Giveaway.html#fillInString">fillInString</a></li><li><span class="small-icon F">F</span><a href="Giveaway.html#pause">pause</a></li><li><span class="small-icon F">F</span><a href="Giveaway.html#reroll">reroll</a></li><li><span class="small-icon F">F</span><a href="Giveaway.html#roll">roll</a></li><li><span class="small-icon F">F</span><a href="Giveaway.html#unpause">unpause</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#allowedMentions">allowedMentions</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#bonusEntries">bonusEntries</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#channelId">channelId</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#client">client</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#data">data</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#duration">duration</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#embedColor">embedColor</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#embedColorEnd">embedColorEnd</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#endAt">endAt</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#endTimeout">endTimeout</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#ended">ended</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#exemptMembersFunction">exemptMembersFunction</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#exemptPermissions">exemptPermissions</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#extraData">extraData</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#guildId">guildId</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#hostedBy">hostedBy</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#image">image</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#isDrop">isDrop</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#lastChance">lastChance</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#manager">manager</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#message">message</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#messageButton">messageButton</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#messageId">messageId</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#messageURL">messageURL</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#messages">messages</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#options">options</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#pauseOptions">pauseOptions</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#prize">prize</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#remainingTime">remainingTime</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#startAt">startAt</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#thumbnail">thumbnail</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#winnerCount">winnerCount</a></li><li><span class="small-icon M">M</span><a href="Giveaway.html#winnerIds">winnerIds</a></li></ul></li><li><span class="small-icon C">C</span><b><a href="GiveawaysManager.html">GiveawaysManager</a></b><ul class="has-class-methods"><li><span class="small-icon F">F</span><a href="GiveawaysManager.html#delete">delete</a></li><li><span class="small-icon F">F</span><a href="GiveawaysManager.html#deleteGiveaway">deleteGiveaway</a></li><li><span class="small-icon F">F</span><a href="GiveawaysManager.html#edit">edit</a></li><li><span class="small-icon F">F</span><a href="GiveawaysManager.html#end">end</a></li><li><span class="small-icon F">F</span><a href="GiveawaysManager.html#generateEndEmbed">generateEndEmbed</a></li><li><span class="small-icon F">F</span><a href="GiveawaysManager.html#generateMainEmbed">generateMainEmbed</a></li><li><span class="small-icon F">F</span><a href="GiveawaysManager.html#generateNoValidParticipantsEndEmbed">generateNoValidParticipantsEndEmbed</a></li><li><span class="small-icon F">F</span><a href="GiveawaysManager.html#pause">pause</a></li><li><span class="small-icon F">F</span><a href="GiveawaysManager.html#reroll">reroll</a></li><li><span class="small-icon F">F</span><a href="GiveawaysManager.html#start">start</a></li><li><span class="small-icon F">F</span><a href="GiveawaysManager.html#unpause">unpause</a></li><li><span class="small-icon M">M</span><a href="GiveawaysManager.html#client">client</a></li><li><span class="small-icon M">M</span><a href="GiveawaysManager.html#giveaways">giveaways</a></li><li><span class="small-icon M">M</span><a href="GiveawaysManager.html#options">options</a></li><li><span class="small-icon M">M</span><a href="GiveawaysManager.html#ready">ready</a></li></ul></li></ul><h5 class="no-bottom must-underline">Events</h5><ul><li><span class="small-icon E">E</span><a href="GiveawaysManager.html#event:giveawayDeleted">giveawayDeleted</a></li><li><span class="small-icon E">E</span><a href="GiveawaysManager.html#event:giveawayEnded">giveawayEnded</a></li><li><span class="small-icon E">E</span><a href="GiveawaysManager.html#event:giveawayJoined">giveawayJoined</a></li><li><span class="small-icon E">E</span><a href="GiveawaysManager.html#event:giveawayReactionRemoved">giveawayReactionRemoved</a></li><li><span class="small-icon E">E</span><a href="GiveawaysManager.html#event:giveawayRerolled">giveawayRerolled</a></li></ul><h4><a href="global.html">Global</a></h4>
+</nav>
+
+<div id="main">
+    <div class="burger">
+        <div class="burger-line-1"></div>
+        <div class="burger-line-2"></div>
+        <div class="burger-line-3"></div>
+    </div>
+
+    <h1 class="page-title">Home</h1>
+
+    
+
+
+
+    
+
+
+    <h3>vante-giveaways 1.0.0</h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <hr>
+    <section>
+        <article><h1>Discord Giveaways</h1>
+<p><a href="https://discord.gg/luppux"><img src="https://img.shields.io/badge/Chat-Click%20here-7289d9?style=for-the-badge&amp;logo=discord" alt="discordBadge"></a>
+<a href="https://npmjs.com/vante-giveaways"><img src="https://img.shields.io/npm/dt/vante-giveaways?style=for-the-badge" alt="downloadsBadge"></a>
+<a href="https://npmjs.com/vante-giveaways"><img src="https://img.shields.io/npm/v/vante-giveaways?style=for-the-badge" alt="versionBadge"></a>
+<a href="https://giveaways.vante.dev/"><img src="https://img.shields.io/badge/Documentation-Click%20here-blue?style=for-the-badge" alt="documentationBadge"></a></p>
+<p>Vante Giveaways is a powerful <a href="https://nodejs.org">Node.js</a> module that allows you to easily create giveaways!</p>
+<h2>Features</h2>
+<ul>
+<li>⏱️ Easy to use!</li>
+<li>🔄 Automatic restart after bot crash!</li>
+<li>🇫🇷 Support for translations: adapt the strings for your own language!</li>
+<li>📁 Support for all databases! (default is json)</li>
+<li>⚙️ Very customizable! (prize, duration, winners, ignored permissions, bonus entries, etc...)</li>
+<li>🚀 Super powerful: start, edit, reroll, end, delete and pause giveaways!</li>
+<li>💥 Events: giveawayEnded, giveawayRerolled, giveawayDeleted, giveawayJoined and giveawayLeaved</li>
+<li>🕸️ Support for shards!</li>
+<li>and much more!</li>
+</ul>
+<h2>Installation</h2>
+<pre class="prettyprint linenums source lang-bash"><code>npm install --save vante-giveaways
+</code></pre>
+<h2>Examples</h2>
+<p>You can read this example bot on GitHub: <a href="https://github.com/vante-dev/vante-giveaways/tree/giveaways-bot">discord-giveaways-bot</a></p>
+<h3>Launch of the module</h3>
+<p>Required Discord Intents: <code>Guilds</code> and <code>GuildMembers</code>.</p>
+<pre class="prettyprint linenums source lang-js"><code>const Discord = require('discord.js');
+const client = new Discord.Client({
+    intents: [
+        Discord.IntentsBitField.Flags.Guilds,
+        Discord.IntentsBitField.Flags.GuildMembers
+    ]
+});
+
+// Requires Manager from discord-giveaways
+const { GiveawaysManager } = require('vante-giveaways');
+const manager = new GiveawaysManager(client, {
+    storage: './giveaways.json',
+    default: {
+        embedColor: '#0a0000',
+        buttonEmoji: '🎉',
+        buttonStyle: Discord.ButtonStyle.Secondary,
+    }
+});
+
+// We now have a giveawaysManager property to access the manager everywhere!
+client.giveawaysManager = manager;
+
+client.giveawaysManager.on('giveawayJoined', (giveaway, member, interaction) => {
+  if (!giveaway.isDrop) return interaction.reply({ content: `:tada: Congratulations **${member.user.username}**, you have joined the giveaway`, ephemeral: true })
+
+  interaction.reply({ content: `:tada: Congratulations **${member.user.username}**, you have joined the drop giveaway`, ephemeral: true })
+});
+
+client.giveawaysManager.on('giveawayLeaved', (giveaway, member, interaction) => {
+  if (!giveaway.isDrop) return interaction.reply({ content: `**${member.user.username}**, you have left the giveaway`, ephemeral: true })
+
+  interaction.reply({ content: `**${member.user.username}**, you have left the drop giveaway`, ephemeral: true })
+});
+
+client.on('ready', () => {
+    console.log('Bot is ready!');
+});
+
+client.login(process.env.DISCORD_BOT_TOKEN);
+</code></pre>
+<p>After that, giveaways that are not yet completed will start to be updated again and new giveaways can be started.
+You can pass an options object to customize the giveaways. Here is a list of them:</p>
+<ul>
+<li><strong>client</strong>: the discord client (your discord bot instance).</li>
+<li><strong><a href="https://giveaways.vante.dev/global.html#GiveawaysManagerOptions">and many other optional parameters to customize the manager - read documentation</a></strong></li>
+</ul>
+<h3>Start a giveaway</h3>
+<pre class="prettyprint linenums source lang-js"><code>client.on('interactionCreate', (interaction) => {
+    const ms = require('ms');
+
+    if (interaction.isChatInputCommand() && interaction.commandName === 'start') {
+        // /start 2d 1 Awesome prize!
+        // Will create a giveaway with a duration of two days, with one winner and the prize will be &quot;Awesome prize!&quot;
+
+        const duration = interaction.options.getString('duration');
+        const winnerCount = interaction.options.getInteger('winners');
+        const prize = interaction.options.getString('prize');
+
+        client.giveawaysManager
+            .start(interaction.channel, {
+                duration: ms(duration),
+                winnerCount,
+                prize
+            })
+            .then((data) => {
+                console.log(data); // {...} (messageId, end date and more)
+            });
+        // And the giveaway has started!
+    }
+});
+</code></pre>
+<ul>
+<li><strong>options.duration</strong>: the giveaway duration.</li>
+<li><strong>options.prize</strong>: the giveaway prize.</li>
+<li><strong>options.winnerCount</strong>: the number of giveaway winners.</li>
+<li><strong><a href="https://giveaways.vante.dev/global.html#GiveawayStartOptions">and many other optional parameters to customize the giveaway - read documentation</a></strong></li>
+</ul>
+<p>This allows you to start a new giveaway. Once the <code>start()</code> function is called, the giveaway starts, and you only have to observe the result, the package does the rest!</p>
+<div style="display: flex;">
+    <div style="flex: 50%; padding: 10px;">
+        <a href="http://zupimages.net/viewer.php?id=23/41/9fe2.png">
+            <img src="https://zupimages.net/up/23/41/9fe2.png" style="width: 100%; height: auto;"/>
+        </a>
+    </div>
+    <div style="flex: 50%; padding: 10px;">
+        <a href="http://zupimages.net/viewer.php?id=23/41/8po1.png">
+            <img src="https://zupimages.net/up/23/41/8po1.png" style="width: 100%; height: auto;"/>
+        </a>
+    </div>
+</div>
+<h4>⚠ ATTENTION!</h4>
+<p>The command examples below (reroll, edit delete, end) can be executed on any server your bot is a member of if a person has the <code>prize</code> or the <code>messageId</code> of a giveaway. To prevent abuse we recommend to check if the <code>prize</code> or the <code>messageId</code> that was provided by the command user is for a giveaway on the same server, if it is not, then cancel the command execution.</p>
+<pre class="prettyprint linenums source lang-js"><code>const query = interaction.options.getString('query');
+const giveaway =
+    // Search with giveaway prize
+    client.giveawaysManager.giveaways.find((g) => g.guildId === interaction.guildId && g.prize === query) ||
+    // Search with messageId
+    client.giveawaysManager.giveaways.find((g) => g.guildId === interaction.guildId && g.messageId === query);
+
+// If no giveaway was found
+if (!giveaway) return interaction.reply(`Unable to find a giveaway for \`${query}\`.`);
+</code></pre>
+<h3>Reroll a giveaway</h3>
+<pre class="prettyprint linenums source lang-js"><code>client.on('interactionCreate', (interaction) => {
+    if (interaction.isChatInputCommand() && interaction.commandName === 'reroll') {
+        const messageId = interaction.options.getString('message_id');
+        client.giveawaysManager
+            .reroll(messageId)
+            .then(() => {
+                interaction.reply('Success! Giveaway rerolled!');
+            })
+            .catch((err) => {
+                interaction.reply(`An error has occurred, please check and try again.\n\`${err}\``);
+            });
+    }
+});
+</code></pre>
+<ul>
+<li><strong>options.winnerCount</strong>: the number of winners to pick.</li>
+<li><strong>options.messages</strong>: an object with the &quot;congrat&quot; and the &quot;error&quot; message. <a href="https://github.com/vante-dev/vante-giveaways#-translation">Usage example</a>.</li>
+<li><strong>options.messages.replyWhenNoWinner</strong>: Whether or not to send the &quot;error&quot; message when there is no winner.</li>
+</ul>
+<a href="http://zupimages.net/viewer.php?id=23/41/kq46.png">
+    <img src="https://zupimages.net/up/23/41/kq46.png"/>
+</a>
+<h3>Edit a giveaway</h3>
+<pre class="prettyprint linenums source lang-js"><code>client.on('interactionCreate', (interaction) => {
+    if (interaction.isChatInputCommand() && interaction.commandName === 'edit') {
+        const messageId = interaction.options.getString('message_id');
+        client.giveawaysManager
+            .edit(messageId, {
+                addTime: 5000,
+                newWinnerCount: 3,
+                newPrize: 'New Prize!'
+            })
+            .then(() => {
+                interaction.reply('Success! Giveaway updated!');
+            })
+            .catch((err) => {
+                interaction.reply(`An error has occurred, please check and try again.\n\`${err}\``);
+            });
+    }
+});
+</code></pre>
+<ul>
+<li><strong>options.newWinnerCount</strong>: the new number of winners.</li>
+<li><strong>options.newPrize</strong>: the new prize. You can <a href="https://github.com/vante-dev/vante-giveaways#access-giveaway-properties-in-messages">access giveaway properties</a>.</li>
+<li><strong>options.addTime</strong>: the number of milliseconds to add to the giveaway duration.</li>
+<li><strong>options.setEndTimestamp</strong>: the timestamp of the new end date (for example, for the giveaway to be ended in 1 hour, set it to <code>Date.now() + 60000</code>).</li>
+<li><strong><a href="https://giveaways.vante.dev/global.html#GiveawayEditOptions">and many other optional parameters - read documentation</a></strong></li>
+</ul>
+<p><strong>Note</strong>: to reduce giveaway duration, define <code>addTime</code> with a negative number! For example <code>addTime: -5000</code> will reduce giveaway duration by 5 seconds!</p>
+<h3>Delete a giveaway</h3>
+<pre class="prettyprint linenums source lang-js"><code>client.on('interactionCreate', (interaction) => {
+    if (interaction.isChatInputCommand() && interaction.commandName === 'delete') {
+        const messageId = interaction.options.getString('message_id');
+        client.giveawaysManager
+            .delete(messageId)
+            .then(() => {
+                interaction.reply('Success! Giveaway deleted!');
+            })
+            .catch((err) => {
+                interaction.reply(`An error has occurred, please check and try again.\n\`${err}\``);
+            });
+    }
+});
+</code></pre>
+<ul>
+<li><strong>doNotDeleteMessage</strong>: whether the giveaway message shouldn't be deleted.</li>
+</ul>
+<p>⚠️ <strong>Note</strong>: when you use the delete function, the giveaway data and the message of the giveaway are deleted (by default). You cannot restore a giveaway once you have deleted it!</p>
+<h3>End a giveaway</h3>
+<pre class="prettyprint linenums source lang-js"><code>client.on('interactionCreate', (interaction) => {
+    if (interaction.isChatInputCommand() && interaction.commandName === 'end') {
+        const messageId = interaction.options.getString('message_id');
+        client.giveawaysManager
+            .end(messageId)
+            .then(() => {
+                interaction.reply('Success! Giveaway ended!');
+            })
+            .catch((err) => {
+                interaction.reply(`An error has occurred, please check and try again.\n\`${err}\``);
+            });
+    }
+});
+</code></pre>
+<ul>
+<li><strong>noWinnerMessage</strong>: Sent in the channel if there is no valid winner for the giveaway. <a href="https://github.com/vante-dev/vante-giveaways#message-options">Message Options</a></li>
+</ul>
+<h3>Pause a giveaway</h3>
+<pre class="prettyprint linenums source lang-js"><code>client.on('interactionCreate', (interaction) => {
+    if (interaction.isChatInputCommand() && interaction.commandName === 'pause') {
+        const messageId = interaction.options.getString('message_id');
+        client.giveawaysManager
+            .pause(messageId)
+            .then(() => {
+                interaction.reply('Success! Giveaway paused!');
+            })
+            .catch((err) => {
+                interaction.reply(`An error has occurred, please check and try again.\n\`${err}\``);
+            });
+    }
+});
+</code></pre>
+<ul>
+<li><strong>options.content</strong>: the text of the embed when the giveaway is paused. You can <a href="https://github.com/vante-dev/vante-giveaways#access-giveaway-properties-in-messages">access giveaway properties</a>.</li>
+<li><strong>options.unpauseAfter</strong>: the number of milliseconds, or a timestamp in milliseconds, after which the giveaway will automatically unpause.</li>
+<li><strong>options.embedColor</strong>: the color of the embed when the giveaway is paused.</li>
+<li><strong>options.infiniteDurationText</strong>: The text that gets displayed next to <code>GiveawayMessages#drawing</code> in the paused embed, when there is no <code>unpauseAfter</code>.<br>
+^^^ You can <a href="https://github.com/vante-dev/vante-giveaways#access-giveaway-properties-in-messages">access giveaway properties</a>.</li>
+</ul>
+<p>⚠️ <strong>Note</strong>: the pause function overwrites/edits the <a href="https://github.com/vante-dev/vante-giveaways#pause-options">pauseOptions object property</a> of a giveaway!</p>
+<h3>Unpause a giveaway</h3>
+<pre class="prettyprint linenums source lang-js"><code>client.on('interactionCreate', (interaction) => {
+    if (interaction.isChatInputCommand() && interaction.commandName === 'unpause') {
+        const messageId = interaction.options.getString('message_id');
+        client.giveawaysManager
+            .unpause(messageId)
+            .then(() => {
+                interaction.reply('Success! Giveaway unpaused!');
+            })
+            .catch((err) => {
+                interaction.reply(`An error has occurred, please check and try again.\n\`${err}\``);
+            });
+    }
+});
+</code></pre>
+<h3>Fetch giveaways</h3>
+<pre class="prettyprint linenums source lang-js"><code>// A list of all the giveaways
+const allGiveaways = client.giveawaysManager.giveaways; // [ {Giveaway}, {Giveaway} ]
+
+// A list of all the giveaways on the server with Id &quot;1909282092&quot;
+const onServer = client.giveawaysManager.giveaways.filter((g) => g.guildId === '1909282092');
+
+// A list of the current active giveaways (not ended)
+const notEnded = client.giveawaysManager.giveaways.filter((g) => !g.ended);
+</code></pre>
+<h3>Exempt Members</h3>
+<p>Function to filter members. If true is returned, the member will not be able to win the giveaway.</p>
+<pre class="prettyprint linenums source lang-js"><code>client.giveawaysManager.start(interaction.channel, {
+    duration: 60000,
+    winnerCount: 1,
+    prize: 'Free Steam Key',
+    // Only members who have the &quot;Nitro Boost&quot; role are able to win
+    exemptMembers: (member, giveaway) => !member.roles.cache.some((r) => r.name === 'Nitro Boost')
+});
+</code></pre>
+<p><strong>Note (only for proficients)</strong>: if you want to use values of global variables inside of the function without using <code>giveaway.extraData</code>, you can use the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a> constructor:</p>
+<pre class="prettyprint linenums source lang-js"><code>const roleName = 'Nitro Boost';
+
+client.giveawaysManager.start(interaction.channel, {
+    duration: 60000,
+    winnerCount: 1,
+    prize: 'Free Steam Key',
+    // Only members who have the the role which is assigned to &quot;roleName&quot; are able to win
+    exemptMembers: new Function(
+        'member',
+        'giveaway',
+        `return !member.roles.cache.some((r) => r.name === '${roleName}')`
+    )
+});
+</code></pre>
+<p><u><strong>⚠ Note</strong></u></p>
+<ul>
+<li>You can use <code>this</code>, instead of the <code>giveaway</code> parameter, inside of the function string to access anything of the giveaway instance.<br>
+For example: <code>this.extraData</code>, or <code>this.client</code>.</li>
+<li>Strings have to be &quot;stringified&quot; (wrapped in quotation marks) again like you can see in the example.<br>
+Array brackets also have to be stated again.</li>
+<li>Global variables which contain numbers with more than 16 digits cannot be used.<br>
+=&gt; Snoflakes have to be &quot;stringified&quot; correctly to avoid misbehaviour.</li>
+<li>If you want to make an asynchronous function in this format, refer to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction">this</a> article.</li>
+<li><u><strong>Because of those various complications it is therefore highly suggested to use <code>giveaway.extraData</code> for storing variables.</strong></u><br>
+But if you really want to do it in this way and need more information/help, please visit the <a href="https://discord.gg/luppux">Discord Server</a>.</li>
+</ul>
+<h3>Last Chance</h3>
+<pre class="prettyprint linenums source lang-js"><code>client.giveawaysManager.start(interaction.channel, {
+    duration: 60000,
+    winnerCount: 1,
+    prize: 'Discord Nitro!',
+    lastChance: {
+        enabled: true,
+        content: '⚠️ **LAST CHANCE TO ENTER !** ⚠️',
+        threshold: 10_000,
+        embedColor: '#FF0000'
+    }
+});
+</code></pre>
+<ul>
+<li><strong>lastChance.enabled</strong>: if the last chance system is enabled.</li>
+<li><strong>lastChance.content</strong>: the text of the embed when the last chance system is enabled.<br>
+^^^ You can <a href="https://github.com/vante-dev/vante-giveaways#access-giveaway-properties-in-messages">access giveaway properties</a>.</li>
+<li><strong>lastChance.threshold</strong>: the number of milliseconds before the giveaway ends when the last chance system will be enabled.</li>
+<li><strong>lastChance.embedColor</strong>: the color of the embed when last chance is enabled.</li>
+</ul>
+<a href="https://zupimages.net/viewer.php?id=23/41/9p94.png">
+    <img src="https://zupimages.net/up/23/41/9p94.png"/>
+</a>
+<h3>Pause Options</h3>
+<pre class="prettyprint linenums source lang-js"><code>client.giveawaysManager.start(interaction.channel, {
+    duration: 60000,
+    winnerCount: 1,
+    prize: 'Discord Nitro!',
+    pauseOptions: {
+        isPaused: true,
+        content: '⚠️ **THIS GIVEAWAY IS PAUSED !** ⚠️',
+        unpauseAfter: null,
+        embedColor: '#FFFF00',
+        infiniteDurationText: '`NEVER`'
+    }
+});
+</code></pre>
+<ul>
+<li><strong>pauseOptions.isPaused</strong>: if the giveaway is paused.</li>
+<li><strong>pauseOptions.content</strong>: the text of the embed when the giveaway is paused.<br>
+^^^ You can <a href="https://github.com/vante-dev/vante-giveaways#access-giveaway-properties-in-messages">access giveaway properties</a>.</li>
+<li><strong>pauseOptions.unpauseAfter</strong>: the number of milliseconds, or a timestamp in milliseconds, after which the giveaway will automatically unpause.</li>
+<li><strong>pauseOptions.embedColor</strong>: the color of the embed when the giveaway is paused.</li>
+<li><strong>pauseOptions.infiniteDurationText</strong>: The text that gets displayed next to <code>GiveawayMessages#drawing</code> in the paused embed, when there is no <code>unpauseAfter</code>.<br>
+^^^ You can <a href="https://github.com/vante-dev/vante-giveaways#access-giveaway-properties-in-messages">access giveaway properties</a>.</li>
+</ul>
+<a href="https://zupimages.net/viewer.php?id=23/41/bdxc.png">
+    <img src="https://zupimages.net/up/23/41/bdxc.png"/>
+</a>
+<h3>Bonus Entries</h3>
+<pre class="prettyprint linenums source lang-js"><code>client.giveawaysManager.start(interaction.channel, {
+    duration: 60000,
+    winnerCount: 1,
+    prize: 'Free Steam Key',
+    bonusEntries: [
+        {
+            // Members who have the &quot;Nitro Boost&quot; role get 2 bonus entries
+            bonus: (member, giveaway) => (member.roles.cache.some((r) => r.name === 'Nitro Boost') ? 2 : null),
+            cumulative: false
+        }
+    ]
+});
+</code></pre>
+<ul>
+<li><strong>bonusEntries[].bonus</strong>: the filter function that takes two parameters: &quot;member&quot; and &quot;giveaway&quot;, and returns the amount of additional entries.</li>
+<li><strong>bonusEntries[].cumulative</strong>: if the amount of entries from the function can get summed with other amounts of entries.</li>
+</ul>
+<p><strong>Note (only for proficients)</strong>: if you want to use values of global variables inside of the function without using <code>giveaway.extraData</code>, you can use the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a> constructor.<br>
+Look at the <a href="https://github.com/vante-dev/vante-giveaways#exempt-members">exemptMembers</a> section for more information on that.</p>
+<h3>Message Options</h3>
+<p>Options are available for the following messages:<br>
+<code>GiveawayStartOptions#GiveawayMessages#winMessage</code>, <code>GiveawayRerollOptions#messages#congrat</code>, <code>GiveawayRerollOptions#messages#error</code> and <code>client.giveawaysManager.end(messageId, noWinnerMessage)</code>.</p>
+<p>You can <a href="https://github.com/vante-dev/vante-giveaways#access-giveaway-properties-in-messages">access giveaway properties</a> in all embed or component properties that are a string.</p>
+<p>The format, including all currently available options, looks like this:</p>
+<pre class="prettyprint linenums source lang-js"><code>message: {
+    content: '',
+    embed: new Discord.EmbedBuilder(),
+    components: [new Discord.ActionRowBuilder()],
+    replyToGiveaway: true
+}
+</code></pre>
+<p>⚠ <strong>Note</strong>: When sending a component, <code>content</code> or <code>embed</code> is required.</p>
+<h3>Access giveaway properties in messages</h3>
+<p>You can access any giveaway property inside of giveaway messages with the format: <code>{this.&lt;property&gt;}</code>.<br>
+For example:</p>
+<!-- prettier-ignore -->
+<pre class="prettyprint linenums source lang-js"><code>winMessage: 'Congratulations, {winners}! You won **{this.prize}**!\n{this.messageURL}'
+</code></pre>
+<p>Also, you can write JavaScript code inside of <code>{}</code>.<br>
+For example:</p>
+<!-- prettier-ignore -->
+<pre class="prettyprint linenums source lang-js"><code>winMessage: 'Congratulations, {winners}! You won **{this.prize.toUpperCase()}**!\n{this.messageURL}'
+</code></pre>
+<p>If you want to fill in strings that are not messages of a giveaway, or just custom embeds, then you can use <code>giveaway.fillInString(string)</code> for strings, <code>giveaway.fillInEmbed(embed)</code> for embeds</p>
+<h2>🇫🇷 Translation</h2>
+<p>You can also pass a <code>messages</code> parameter for the <code>start()</code> function, if you want to translate the giveaway texts:</p>
+<ul>
+<li><strong>options.messages.giveaway</strong>: the message that will be displayed above the embeds.</li>
+<li><strong>options.messages.giveawayEnded</strong>: the message that will be displayed above the embeds when the giveaway is ended.</li>
+<li><strong>options.messages.giveawayEndedButton</strong>: Displayed under the giveaway ended message when the giveaway has ended.</li>
+<li><strong>options.messages.title</strong>: the title of the giveaway embed. Will default to the prize of the giveaway if the value is not a string.</li>
+<li><strong>options.messages.drawing</strong>: the message that displays the drawing timestamp.</li>
+<li><strong>options.messages.dropMessage</strong>: the message that will be displayed for drop giveaways.</li>
+<li><strong>options.messages.inviteToParticipate</strong>: the message that invites users to participate.</li>
+<li><strong>options.messages.winMessage</strong>: the message that will be displayed to congratulate the winner(s) when the giveaway is ended.<br>
+^^^ <a href="https://github.com/Androz2091/discord-giveaways#message-options">Message options</a> are available in this message.</li>
+<li><strong>options.messages.embedFooter</strong>: the message displayed at the bottom of the main (not ended) embed.<br>
+^^^ An empty string can be used for &quot;deactivation&quot;, or <a href="https://discord-giveaways.js.org/global.html#EmbedFooterObject"><code>iconURL</code> can be set</a>.</li>
+<li><strong>options.messages.noWinner</strong>: the message that is displayed if no winner can be drawn.</li>
+<li><strong>options.messages.hostedBy</strong>: the message to display the host of the giveaway.</li>
+<li><strong>options.messages.winners</strong>: simply the expression &quot;Winner(s):&quot; in your language.</li>
+<li><strong>options.messages.endedAt</strong>: simply the words &quot;Ended at&quot; in your language.</li>
+<li><strong>options.messages.participants</strong>: the message that displays the last participants that joined last and total participans</li>
+</ul>
+<p>For example:</p>
+<pre class="prettyprint linenums source lang-js"><code>const duration = interaction.options.getString('duration');
+const winnerCount = interaction.options.getInteger('winners');
+const prize = interaction.options.getString('prize');
+
+client.giveawaysManager.start(interaction.channel, {
+    duration: ms(duration),
+    winnerCount,
+    prize,
+    messages: {
+        giveaway: '🎉🎉 **GIVEAWAY** 🎉🎉',
+        giveawayEnded: '🎉🎉 **GIVEAWAY ENDED** 🎉🎉',
+        giveawayEndedButton: 'Go to the giveaway',
+        title: '{this.prize}',
+        inviteToParticipate: 'React with 🎉 to participate!',
+        winMessage: 'Congratulations, {winners}! You won **{this.prize}**!',
+        drawing: 'Drawing: {timestamp-relative} ({timestamp-default})',
+        dropMessage: 'Be the first to react with 🎉 !',
+        embedFooter: '{this.winnerCount} winner(s)',
+        noWinner: 'Giveaway cancelled, no valid participations.',
+        winners: 'Winner(s):',
+        endedAt: 'Ended at',
+        hostedBy: 'Hosted by: {this.hostedBy}',
+        participants: 'Number of Participants: {participants}\nLatest Joined Member {member}',
+    }
+});
+</code></pre>
+<p>You can <a href="https://github.com/vante-dev/vante-giveaways#access-giveaway-properties-in-messages">access giveaway properties</a> in all these messages.</p>
+<p>And for the <code>reroll()</code> function:</p>
+<pre class="prettyprint linenums source lang-js"><code>client.giveawaysManager.reroll(messageId, {
+    messages: {
+        congrat: ':tada: New winner(s): {winners}! Congratulations, you won **{this.prize}**!',
+        error: 'No valid participations, no new winner(s) can be chosen!'
+    }
+});
+</code></pre>
+<ul>
+<li><strong>options.messages.congrat</strong>: the congratulatory message.</li>
+<li><strong>options.messages.error</strong>: the error message if there is no valid participant.</li>
+</ul>
+<p>You can <a href="https://github.com/vante-dev/vante-giveaways#access-giveaway-properties-in-messages">access giveaway properties</a> in these messages.<br>
+<a href="https://github.com/vante-dev/vante-giveaways#message-options">Message options</a> are available in these messages.</p>
+<h2>Custom Database</h2>
+<p>You can use your custom database to save giveaways, instead of the json files (the &quot;database&quot; by default for <code>vante-giveaways</code>).<br>
+For this, you will need to extend the <code>GiveawaysManager</code> class, and replace some methods with your custom ones.<br>
+There are 4 methods you will need to replace:</p>
+<ul>
+<li><code>getAllGiveaways</code>: this method returns an array of stored giveaways.</li>
+<li><code>saveGiveaway</code>: this method stores a new giveaway in the database.</li>
+<li><code>editGiveaway</code>: this method edits a giveaway already stored in the database.</li>
+<li><code>deleteGiveaway</code>: this method deletes a giveaway from the database (permanently).</li>
+</ul>
+<p><strong>⚠️ All the methods should be asynchronous to return a promise!</strong></p>
+<p><u><strong>SQL examples</strong></u></p>
+<ul>
+<li><a href="https://github.com/vante-dev/vante-giveaways/examples/custom-databases/mysql.js">MySQL</a></li>
+<li>SQLite
+<ul>
+<li><a href="https://github.com/vante-dev/vante-giveaways/examples/custom-databases/quick.db.js">Quick.db</a></li>
+<li><a href="https://github.com/vante-dev/vante-giveaways/examples/custom-databases/enmap.js">Enmap</a></li>
+</ul>
+</li>
+</ul>
+<p><u><strong>NoSQL examples</strong></u></p>
+<ul>
+<li>MongoDB
+<ul>
+<li><a href="https://github.com/vante-dev/vante-giveaways/examples/custom-databases/mongoose.js">Mongoose</a></li>
+<li><a href="https://github.com/vante-dev/vante-giveaways/examples/custom-databases/quickmongo.js">QuickMongo</a> ⚠️ Not recommended for high giveaway usage, use the <code>mongoose</code> example instead</li>
+</ul>
+</li>
+<li><a href="https://github.com/vante-dev/vante-giveaways/examples/custom-databases/nano.js">Apache CouchDB - Nano</a></li>
+<li>Replit Database ⚠️ Only usable if your bot is hosted on <a href="https://replit.com/">Replit</a>
+<ul>
+<li><a href="https://github.com/vante-dev/vante-giveaways/examples/custom-databases/replit.js">@replit/database</a></li>
+<li><a href="https://github.com/vante-dev/vante-giveaways/examples/custom-databases/quick.replit.js">Quick.Replit</a></li>
+</ul>
+</li>
+</ul>
+<h1 align="center"> 🤝 Contribution Acknowledgments 🤝 </h1>
+Appreciation to [@Androzz](https://github.com/Androz2091) for granting me the opportunity to upgrade the [giveaways package](https://github.com/Androz2091/discord-giveaways).
+Thanks to [@Mehmet](https://github.com/memte) for providing the excellent Bot Template.</article>
+    </section>
+
+
+
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> using <a href="https://github.com/devsnowflake/jsdoc-skyceil">Skyceil Theme</a>
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+
+</body>
+</html>
