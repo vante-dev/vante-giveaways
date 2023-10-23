@@ -1,1 +1,0 @@
-// Example bot available at https://github.com/vante-dev/vante-giveaways/tree/giveaways-bot
