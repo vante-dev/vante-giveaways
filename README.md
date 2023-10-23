@@ -27,7 +27,7 @@ npm install --save vante-giveaways
 
 ## Examples
 
-You can read this example bot on GitHub: [discord-giveaways-bot](https://github.com/vante-dev/vante-giveaways-bot)
+You can read this example bot on GitHub: [discord-giveaways-bot](https://github.com/vante-dev/vante-giveaways/tree/giveaways-bot)
 
 ### Launch of the module
 
