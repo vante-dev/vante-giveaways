@@ -1,0 +1,16 @@
+module.exports = {
+    giveaway: '🎉🎉 **GIVEAWAY** 🎉🎉',
+    giveawayEnded: '🎉🎉 **GIVEAWAY ENDED** 🎉🎉',
+    giveawayEndedButton: 'Go to the giveaway',
+    title: '{this.prize}',
+    inviteToParticipate: 'React with 🎉 to participate!',
+    winMessage: 'Congratulations, {winners}! You won **{this.prize}**!',
+    drawing: 'Drawing: {timestamp-relative} ({timestamp-default})',
+    dropMessage: 'Be the first to react with 🎉 !',
+    embedFooter: '{this.winnerCount} winner(s)',
+    noWinner: 'Giveaway cancelled, no valid participations.',
+    winners: 'Winner(s):',
+    endedAt: 'Ended at',
+    hostedBy: 'Hosted by: {this.hostedBy}',
+    participants: 'Number of Participants: {participants}\nLatest Joined Member {member}',
+}
